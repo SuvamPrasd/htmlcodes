@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>javascript demo</title>
+    <script src="styleFirstDemo.js"></script>
+</head>
+
+
+<!--html body-->
+<body>
+    <div id="demo">My name is ?</div>
+    <div id="output"></div>
+
+    <!--button on click method to change the current text-->
+    <button type="button" onclick='callMethodForClick()'>Click me!</button>
+    <p>This is variable initialisation in javascript</p>
+    <div id="hello">show the anwer</div>
+    <!--array declaration-->
+    <h1>Array</h1>
+    <div id="array">Displaying the array</div>
+    <h1>Objects</h1>
+    <div id="object"></div>
+    <br>
+    <hr>
+    <button onclick='document.getElementById("time").innerHTML = Date();'><u>Current time</u></button>
+    <div id="time"></div>
+    <!--This in place of document.getElementById("time")-->
+    <hr>
+    <br>
+    <button onclick='this.innerHTML = Date();'>This time ?</button>
+    <hr>
+    <img src="DSC_0008-01.jpeg" alt="watch image" width="50%" height="500px" onmousemove='this.src = "/media/suvam/something/web_development/DSC_0013-01.jpeg"
+    ' onmouseout="this.src='/media/suvam/something/web_development/DSC_0008-01.jpeg'">
+
+<h2>JavaScript String Methods</h2>
+<p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+<p id="index"></p>
+<hr>
+<br>
+<!--<h2>JavaScript Numbers</h2>
+<p>Infinity is returned if you calculate a number outside the largest possible number:</p>
+<div id="infinity"></div>-->
+
+
+
+
+    <script>//variable initialization
+    var arrayFirst = ["One","Two","Three","Four"];
+    
+            var x, y, z;  // Statement 1
+            x = "5";    // Statement 2
+            y = 6;    // Statement 3
+            z = x + y;  // Statement 4
+            //var objectOne = {firstName:"Rahul", sureName:"Kumar"};
+            
+            document.getElementById("hello").innerHTML =
+            "The value of z is " + z + ".";
+
+            document.getElementById("array").innerHTML = arrayFirst[2];
+
+            //objects declaration
+            var objectOne = {firstName:"Rahul", 
+            surName:"Kumar", 
+            age:30,
+            fullName: function(){
+            return this.firstName + " " + this.surName + 
+            " is " + this.age + " yrs old."
+            }};  
+        document.getElementById("object").innerHTML = objectOne.fullName();
+
+        var stringIndexOf = "My Country is India";
+        //IndexOf returns the index of the specified word
+        var pos = stringIndexOf.indexOf("Country");
+        //lastIndexOf return the last occurence of char in a particular word
+        var lastPos = stringIndexOf.lastIndexOf("India");
+        document.getElementById("index").innerHTML = pos + " and " + lastPos;
+
+        /*var newNumber = 2;
+        var result = "";
+        while (newNumber != Infinity){
+            newNumber = newNumber * 100;
+            result = result + newNumber + "<br>";
+        }
+        document.getElementById("infinity").innerHTML = result;*/
+
+            </script>
+
+    
+    
+</body>
+</html>

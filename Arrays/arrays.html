@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/media/suvam/something/web_development/Arrays/arrays.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+</head>
+<body>
+
+
+
+    <h2>Arrays in Javascript</h2>
+    <p id="arraysDisplay"></p>
+    <script>
+    var cars = ['toyota', 'Volvo', 'Maruti suziki', 24];
+    var carsLen = cars.length;
+    var carsSort = cars.sort();
+    document.getElementById("arraysDisplay").innerHTML = cars + "<br>" +
+    carsLen + "<br>" + carsSort + "<br>";
+    </script>
+
+
+
+    <!--array elements accessing through loops-->
+    <h2>List of fruits to buy from the store</h2>
+    <p id="fruits"></p>
+    <script>
+        var text;
+    var fruitsItem = ['Apple', 'Orange', 'Mango', 'Maple', 'Strawberry'];
+    text = "<ul>"
+    for (var i = 0; i < fruitsItem.length; i++){
+     text += "<li>" + fruitsItem[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("fruits").innerHTML = text;
+    </script>
+
+
+
+<h2>JavaScript Arrays</h2>
+<p>Array.forEach() calls a function for each array element.</p>
+<p>Array.forEach() is not supported in Internet Explorer 8 or earlier.</p>
+<p id="for"></p>
+<script>
+var text;
+var carsArray = ['Swift', 'Nexus', 'Aventor', 'Ferrai'];
+carsArray.push('City');
+carsArray[carsArray.length] = 'Forza';
+    text = "<ol>";
+    carsArray.forEach(myFunction);
+    text += "</ol>";
+    document.getElementById("for").innerHTML = text;
+</script>
+
+
+
+<h2>toString() in an array and join()</h2>
+<p id="tostring"></p>
+<p id="joinM"></p>
+<script>
+var countries = ['India','Russia','Israil','Japan'];
+document.getElementById("tostring").innerHTML = countries.toString();
+document.getElementById("joinM").innerHTML = countries.join("**");
+</script>
+
+
+
+<h2>shift() and unshift() method</h2>
+<button id="shiftB" onclick="myFunction()">shift</button>
+<p id="shiftM"></p>
+<button id="unshiftB" onclick="mineFunction()">unshift</button>
+<p id="unshiftM"></p>
+
+
+
+
+<h2>The splice() method can be used to add new items to an array</h2>
+<p id="splicingM"> My name is Suvam Prasad </p>
+<button id="changePos" onclick="changePos()">Splice</button>
+
+
+
+<h2>splice() to remove elements without leaving "holes" in the array</h2>
+<p id="deleteSplice">cat dog cow sparrow</p>
+<button id="deleteB" onclick="deleteB()">deleteSplice</button>
+
+
+
+<h2>The concat() method creates a new array by merging (concatenating) existing arrays</h2>
+<p id="concat"></p>
+<script>
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);
+document.getElementById("concat").innerHTML = myChildren;
+</script>
+
+
+<h2>The sort() method sorts an array alphabetically</h2>
+<h2>The reverse() method reverses the elements in an array</h2>
+<p id="sort"></p>
+<p id="reverse"></p>
+<script>
+var characters = ['b','c','a','x','n'];
+document.getElementById("sort").innerHTML = characters.sort();
+document.getElementById("reverse").innerHTML = characters.reverse();
+</script>
+
+
+
+<h2>sorting numeric array using compare technique method</h2>
+<button id="aesc" onclick="increasing()">sort numbers</button>
+<button id="desc" onclick="decreasing()">reverse numbers</button>
+<p id="compare"></p>
+<script>
+    var numbers = [10,34,90,45,23,67];
+    document.getElementById("compare").innerHTML = numbers;
+
+    function increasing(){
+        numbers.sort(function(a,b){return a - b});
+        document.getElementById("compare").innerHTML = numbers;
+    }
+
+    function decreasing(){
+        numbers.sort(function(a,b){
+            return b - a;
+        })
+        document.getElementById("compare").innerHTML = numbers;
+    }
+</script>
+
+
+<h2>JavaScript Array Sort</h2>
+<p>The highest number is <span id="highestNumber"></span>.</p>
+<p>The smallest number is <span id="smallestNumber"></span>.</p>
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("highestNumber").innerHTML = myArrayMax(points);
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+document.getElementById("smallestNumber").innerHTML = myArrayMin(points);
+function myArrayMin(arr){
+    return Math.min.apply(null,arr);
+}
+</script>
+
+
+
+
+<h2>Array forEach loop</h2>
+<p id="foreach"></p>
+<script>
+var txt = " ";
+var numbers = [23, 22, 56, 0, 12];
+numbers.forEach(myNumber);
+document.getElementById("foreach").innerHTML = txt;
+
+function myNumber(values){
+txt = txt + values + "<br>"
+}
+</script>
+
+
+
+<h2>Array mapping </h2>
+<p id="arraymap"></p>
+<script>
+var numbers1 = [10, 11, 12, 13, 14];
+var numbers = numbers1.map(myfunction1);
+document.getElementById("arraymap").innerHTML = numbers + "<br>" + numbers1;
+
+function myfunction1(values){
+return values * 2;
+}
+</script>
+
+
+
+<h2>array filter()</h2>
+<p id="arrayfilter"></p>
+<script>
+var marks = [23, 56, 80, 99, 79];
+var result = marks.filter(calc);
+document.getElementById("arrayfilter").innerHTML = result;
+
+function calc(values){
+    return values > 75;
+}
+</script>
+
+
+
+<h2>The reduce() method runs a function on each array element to produce (reduce it to) a single value.</h2>
+<p id="reduceM"></p>
+<script>
+var numberGroup = [20,10,20,50];
+var total = 0;
+var sum = numberGroup.reduceRight(myFunction);
+document.getElementById("reduceM").innerHTML = sum;
+function myFunction(total,values){
+    return total + values;
+}
+</script>
+
+
+
+<h2>The every() method check if all array values pass a test.</h2>
+<p id="everyM"></p>
+<script>
+var eachMarks = [40, 23, 10, 70];
+var acceptOrReject = eachMarks.every(declare);
+function declare(values){
+    return values > 25;
+}
+document.getElementById("everyM").innerHTML = acceptOrReject;
+</script>
+
+
+
+<h2>The some() method check if some array values pass a test.</h2>
+<p id="someM"></p>
+<script>
+var min = eachMarks.some(declare1);
+function declare1(values){
+    return values < 80;
+}
+document.getElementById("someM").innerHTML = min;
+</script>
+
+
+
+<h2>The indexOf() method searches an array for an element value and returns its position.</h2>
+<p id="arrayIndexOf"></p>
+<script>
+document.getElementById("arrayIndexOf").innerHTML = fruitsItem.indexOf("Mango");
+</script>
+
+
+
+<h2>Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.</h2>
+<p id="lastdexOf"></p>
+<script>
+    var a = fruitsItem.lastIndexOf("Orange");
+document.getElementById("lastdexOf").innerHTML = a;
+</script>
+
+
+
+
+<h2>The find() method returns the value of the first array element that passes a test function.</h2>
+<p id="findM"></p>
+<script>
+document.getElementById("findM").innerHTML = eachMarks.find(declare);
+</script>
+
+
+
+<h2>The findIndex() method returns the index of the first array element that passes a test function.</h2>
+<p id="findIndexM"></p>
+<script>
+document.getElementById("findIndexM").innerHTML = eachMarks.findIndex(declare);
+</script>
+
+
+
+
+</body>
+</html>

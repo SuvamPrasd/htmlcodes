@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>buttons</title>
+    <style>
+    #buttonStyle{
+
+      border-radius: 50px;
+      display: block;
+      background-color: blue;
+      border-color: blue;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: aliceblue;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      align-content: center;
+      margin: 200px;
+    
+    }
+
+    #rectangle{
+
+      border-style: dotted ;
+      border-color: rgb(240, 9, 9);
+      padding: 50px;
+      border: 20px;
+      display: inline-block;
+      backface-visibility: visible;
+      background-color: blue;
+
+
+    }
+
+    .content{
+      background: url("facebook.png");
+      background-repeat: no-repeat;
+      background-size: 130px; 
+      margin-left: 30px;
+    }
+    </style>
+
+    <script>
+    function myName(){
+
+      document.getElementById("buttonStyle").innerHTML = "Suvam Prasad";
+
+    }
+    </script>
+  </head>
+  <body class="content">
+      <div id="rectangle">style</div>
+    <center>
+      <button id="buttonStyle" onclick="myName()">Change</button>
+    </center>
+  </body>
+</html>

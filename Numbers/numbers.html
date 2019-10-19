@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/media/suvam/something/web_development/Numbers/numbers.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numbers</title>
+</head>
+<body>
+    <!--Number method that returns an integer value from the argument-->
+    <h2>Javascript Global method</h2>
+
+    <p>Number() method</p>
+
+    <div id="numberMtd"></div>
+
+    <!--script for number method-->
+    <script>
+        document.getElementById("numberMtd").innerHTML = Number(true) + "<br>" +
+        Number(false) + "<br>" +
+        Number("12") + "<br>" +
+        Number("1 2") + "<br>" +
+        Number("  12") + "<br>" +
+        Number("12.33") + "<br>" +
+        Number("12,33") + "<br>" +
+        Number("Suvam") + "<br>";
+    </script>
+
+    <!--parseInt() parses a string and returns a whole number. Spaces are allowed.-->
+    <p>ParseInt() method</p>
+
+    <div id="parseIntMtd"></div>
+
+    <!--script for parseInt method-->
+    <script>
+    document.getElementById("parseIntMtd").innerHTML = 
+    parseInt("10")   + "<br>" +     // returns 10
+    parseInt("10.33") + "<br>" +      // returns 10
+    parseInt("10 20 30") + "<br>" +   // returns 10
+    parseInt("10 years") + "<br>"  +  // returns 10
+    parseInt("years 10")+ "<br>" ;   // returns NaN 
+    </script>
+
+    <h2>JavaScript Number Object Properties</h2>
+
+    <p>MAX_VALUE returns the largest possible number in JavaScript.</p>
+
+    <p id="maxValue"></p>
+
+    <script>
+    var x = Number.MAX_VALUE;
+    document.getElementById("maxValue").innerHTML = x;
+    </script>
+
+    <p>MIN_VALUE returns the smallest possible number in JavaScript.</p>
+
+    <p id="minValue"></p>
+
+    <script>
+    var x = Number.MIN_VALUE;
+    document.getElementById("minValue").innerHTML = x;
+    </script>
+
+    
+</body>
+</html>

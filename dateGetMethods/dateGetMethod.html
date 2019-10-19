@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date Get Methods</title>
+</head>
+<body>
+    <h1>The getTime() method returns the number of milliseconds since January 1, 1970:</h1>
+    <p id="getTimeM"></p>
+    <script>
+    var date = new Date();
+    document.getElementById("getTimeM").innerHTML = date.getTime();
+    </script>
+
+    <!--GetFullYear-->
+    <h1>The getFullYear() method returns the year of a date as a four digit number:</h1>
+    <p id="getfullyearM"></p>
+    <script>
+    document.getElementById("getfullyearM").innerHTML = date.getFullYear();
+    </script>
+
+    <!--getMonth-->
+    <h1>The getMonth() method returns the month of a date as a number (0-11):</h1>
+    <p id="getmonthM"></p>
+    <script>
+    document.getElementById("getmonthM").innerHTML = date.getMonth();
+    </script>
+
+    <!--getDate-->
+    <h1>The getDate() method returns the day of a date as a number (1-31):</h1>
+    <p id="getdateM"></p>
+    <script>
+    document.getElementById("getdateM").innerHTML = date.getDate();
+    </script>
+
+    <!--getday-->
+    <h1>The getDay() method returns the weekday of a date as a number (0-6):</h1>
+    <p id="getdayM"></p>
+    <script>
+    var days = ["Sunday" , "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday" ];
+    document.getElementById("getdayM").innerHTML = days[date.getDay()];
+    </script>
+
+    
+</body>
+</html>

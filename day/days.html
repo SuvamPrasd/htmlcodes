@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/media/suvam/something/web_development/day/days.js"></script>
+    <title>days</title>
+</head>
+<body>
+
+    <h2>date</h2>
+    <p id="newdate"></p>
+    <script>
+    var date = new Date(1998,12,11);
+    document.getElementById("newdate").innerHTML = date;
+    </script>
+
+
+<h2>datestring</h2>
+<p id="datestring"></p>
+<script>
+var d = new Date("October 13, 2014 11:13:00");
+document.getElementById("datestring").innerHTML = d.toUTCString();
+</script>
+
+
+
+<h2>toDateString</h2>
+<p id="todatestring"></p>
+<script>
+var d = new Date("October 13, 2014 11:13:00");
+document.getElementById("todatestring").innerHTML = d.toDateString();
+</script>
+
+
+
+<h2>IOS date</h2>
+<p id="ios"></p>
+<script>
+var d = new Date("2019-10-12");
+document.getElementById("ios").innerHTML = d;
+</script>
+
+
+
+<h2>parse()</h2>
+<p id="parse"></p>
+<script>
+var d =  Date.parse("October 13, 2014 11:13:00");
+document.getElementById("parse").innerHTML = d;
+</script>
+
+
+
+<h2>milli to date</h2>
+<p id="milliToDate"></p>
+<script>
+var msec = Date.parse("October 13, 2014 11:13:00");
+var d = new Date(msec);
+document.getElementById("milliToDate").innerHTML = d;
+</script>
+
+
+
+</body>
+</html>
